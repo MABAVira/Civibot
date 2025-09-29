@@ -10,7 +10,6 @@
       font-family: Arial, sans-serif;
       display: flex;
     }
-    /* الشريط الجانبي */
     .sidebar {
       width: 220px;
       background-color: #1e1e2f;
@@ -25,7 +24,7 @@
     }
     .sidebar h2 {
       text-align: center;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
       font-size: 20px;
       color: #00d4ff;
     }
@@ -35,26 +34,69 @@
       padding: 15px 20px;
       display: flex;
       align-items: center;
-      transition: background 0.3s;
+      transition: background 0.3s, color 0.3s;
+      font-size: 16px;
     }
     .sidebar a:hover {
       background-color: #33334d;
+      color: #00d4ff;
     }
     .sidebar i {
       margin-right: 10px;
+      font-size: 18px;
+      color: #00d4ff;
     }
-    /* المحتوى */
+    .lang-switch {
+      margin: 10px auto 20px auto;
+      cursor: pointer;
+      background: #00d4ff;
+      color: #1e1e2f;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
     .content {
       margin-left: 220px;
       padding: 20px;
       flex: 1;
     }
   </style>
+  <script>
+    function switchLang(lang) {
+      if (lang === 'ar') {
+        document.getElementById('title').innerText = "مرحبًا بك في لوحة تحكم مابافيرا";
+        document.getElementById('desc').innerText = "هذه اللوحة هي المركز الرئيسي لمشاريع مابافيرا. استخدم القائمة الجانبية للانتقال إلى المبادرات الشريكة.";
+      } else {
+        document.getElementById('title').innerText = "Welcome to MABAVira Dashboard";
+        document.getElementById('desc').innerText = "This dashboard is the central hub for MABAVira projects. Use the sidebar to navigate to partner initiatives.";
+      }
+    }
+  </script>
   <!-- مكتبة أيقونات Font Awesome -->
   <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="sidebar">
     <h2>MABAVira</h2>
+    <!-- زر اختيار اللغة -->
+    <button class="lang-switch" onclick="switchLang('en')">EN</button>
+    <button class="lang-switch" onclick="switchLang('ar')">AR</button>
+
     <a href="https://paldorai.github.io/urban_tech/" target="_blank">
-      <i class="fas fa-city">
+      <i class="fas fa-city"></i> Urban Tech
+    </a>
+    <a href="https://solvanix.github.io/Switchers_Hub/" target="_blank">
+      <i class="fas fa-project-diagram"></i> Switchers Hub
+    </a>
+  </div>
+
+  <div class="content">
+    <h1 id="title">Welcome to MABAVira Dashboard</h1>
+    <p id="desc">
+      This dashboard is the central hub for MABAVira projects.  
+      Use the sidebar to navigate to partner initiatives.
+    </p>
+  </div>
+</body>
+</html>
