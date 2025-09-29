@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MABAVira Dashboard</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+    }
+    /* الشريط الجانبي */
+    .sidebar {
+      width: 220px;
+      background-color: #1e1e2f;
+      color: #fff;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      padding-top: 20px;
+    }
+    .sidebar h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 20px;
+      color: #00d4ff;
+    }
+    .sidebar a {
+      text-decoration: none;
+      color: #fff;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      transition: background 0.3s;
+    }
+    .sidebar a:hover {
+      background-color: #33334d;
+    }
+    .sidebar i {
+      margin-right: 10px;
+    }
+    /* المحتوى */
+    .content {
+      margin-left: 220px;
+      padding: 20px;
+      flex: 1;
+    }
+  </style>
+  <!-- مكتبة أيقونات Font Awesome -->
+  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>MABAVira</h2>
+    <a href="https://paldorai.github.io/urban_tech/" target="_blank">
+      <i class="fas fa-city">
